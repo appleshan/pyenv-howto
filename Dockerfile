@@ -14,8 +14,6 @@ RUN apt-get install -y -qq python3 \
     python3-pip \
     python3-venv \
     direnv \
-    > /dev/null
-
 
 RUN useradd -m python_user 
 
@@ -44,8 +42,5 @@ RUN pyenv install 2.7.14
 RUN echo "Reloading shell"
 
 RUN /bin/bash -c "source ~/.bashrc" 
-
-
-RUN echo "Running Bash"
 
 CMD ["bash"]
